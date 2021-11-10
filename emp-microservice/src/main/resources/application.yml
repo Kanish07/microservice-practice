@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: emp-service
+  datasource:
+    driver_class_name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kanish
+    username: root
+    password: password
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+
+ # cache:
+ #   ehcache:
+ #     config: "classpath:config/ehcache.xml"
+
+#  cache:
+#    cache-names: "cache1,cache2"
+#    caffeine:
+#      spec: "maximumSize=500,expireAfterAccess=600s"
+
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
